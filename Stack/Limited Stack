@@ -1,4 +1,4 @@
-// Stack using Array
+// Stack using Array, LIMITED
 #include<iostream>
 using namespace std;
 

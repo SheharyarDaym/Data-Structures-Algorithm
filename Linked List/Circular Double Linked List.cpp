@@ -417,32 +417,3 @@ void CDL::display()
     } while (temp != start);
     cout << endl;
 }
-
-
-int main(){
-    CDL d;
-    // d.insert_End(5);
-    // d.insert_End(4);
-    // d.insert_End(3);
-
-    // d.insert_After(3,1);
-    // d.insert_Before(5,1);
-
-    // for(int i=0; i<5; i++){
-    //     d.insert_End(i+1);
-    // }
-    // d.insert_End(3);
-    d.insert_End(4);
-    d.insert_End(4);
-    d.insert_End(4);
-    d.insert_End(4);
-    d.insert_End(4);
-    // d.insert_End(7);
-    // d.insert_End(2);
-    d.insert_End(4);
-
-    d.display();
-    d.delete_All_occurence(4);
-    d.display();
-    return 0;
-}

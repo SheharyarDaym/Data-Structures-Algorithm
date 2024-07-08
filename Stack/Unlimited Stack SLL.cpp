@@ -71,21 +71,3 @@ void Stack::display()
         cout << endl;
     }
 }
-
-int main(){
-    Stack s;
-    s.PUSH(5);
-    s.PUSH(4);
-    s.PUSH(3);
-    s.PUSH(2);
-    s.PUSH(2);
-
-    s.display();
-
-    s.POP();
-    s.POP();
-
-    s.display();
-    
-    return 0;
-}

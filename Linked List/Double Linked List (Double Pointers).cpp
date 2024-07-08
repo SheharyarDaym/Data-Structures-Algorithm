@@ -419,28 +419,3 @@ void DLL2::Right_rotate_List(int x)
     end->next = NULL;
     start->prev = NULL;
 }
-
-
-int main(){
-    DLL2 d;
-    DLL2 d1;
-    d.insert_Append(1);
-    d.insert_Append(2);
-    d.insert_Append(3);
-    d.insert_Append(4);
-    d.insert_Append(5);
-    // d.rotate_List(10);
-    d.Right_rotate_List(1);
-
-
-    // d.insert_Before(9,10);
-    // d.insert_After(4,10);
-    // d.delete_First();
-    d.display();
-    // cout << d.isPalindrome();
-    // d.delete_First(4);
-    // d.list_Reverse();
-    // d.display();
-    // d.print_Reverse();
-    return 0;
-}

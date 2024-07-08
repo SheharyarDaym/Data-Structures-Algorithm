@@ -65,22 +65,3 @@ void Stack::display()
     }
     cout << endl;
 }
-
-
-int main(){
-    Stack s(4);
-    s.PUSH(5);
-    s.PUSH(3);
-    s.PUSH(8);
-    s.PUSH(8);
-    s.PUSH(10);
-
-    s.display();
-
-    s.POP();
-    s.POP();
-    
-    s.display();
-
-    return 0;
-}

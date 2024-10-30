@@ -1,0 +1,29 @@
+# Problem Link : 
+# Difficulty : Easy
+
+# C++
+class Solution {
+private:
+    int count=0;
+public:
+    int countNodes(TreeNode* root) {
+        if(!root) return count;
+        count = countNodes(root->left);
+        count = countNodes(root->right);
+        return ++count;
+    }
+};
+
+
+# Python3
+class Solution:
+    def __init__(self):
+        self.count = 0       # Count initialized in constructor to count the nodes 
+
+    def countNodes(self, root: Optional[TreeNode]) -> int:
+        if root is None:
+            return self.count
+        self.count = self.countNodes(root.left)
+        self.count = self.countNodes(root.right)
+        self.count = self.count + 1
+        return self.count

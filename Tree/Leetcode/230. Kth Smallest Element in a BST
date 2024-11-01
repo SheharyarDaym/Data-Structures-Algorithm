@@ -1,6 +1,7 @@
 # Problem Link : https://leetcode.com/problems/kth-smallest-element-in-a-bst
 # Difficulty : Medium
 
+# C++ Solution
 class Solution {
 private:
     vector<int> result;
@@ -17,3 +18,18 @@ public:
         smallest(root->right);
     }
 };
+
+# Python3
+class Solution:
+    def __init__(self):
+        self.result = []
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        self.smallest(root)
+        self.result.sort()
+        return self.result[k-1]
+    def smallest(self, root):
+        if root is None:
+            return
+        self.result.append(root.val)
+        self.smallest(root.left)
+        self.smallest(root.right)

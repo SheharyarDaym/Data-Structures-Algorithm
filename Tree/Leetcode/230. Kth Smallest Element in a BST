@@ -1,0 +1,19 @@
+# Problem Link : https://leetcode.com/problems/kth-smallest-element-in-a-bst
+# Difficulty : Medium
+
+class Solution {
+private:
+    vector<int> result;
+public:
+    int kthSmallest(TreeNode* root, int k) {
+        smallest(root);
+        sort(result.begin(), result.end());
+        return result[k-1];
+    }
+    void smallest(TreeNode* root){
+        if(!root) return;
+        result.push_back(root->val);
+        smallest(root->left);
+        smallest(root->right);
+    }
+};
